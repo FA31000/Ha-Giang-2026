@@ -68,7 +68,8 @@
 - Possible tail end of buckwheat flower season.
 
 ## Website (trip plan for friend's feedback)
-- Purpose: send to friend for a yes before booking anything. Deploy later via GitHub + Vercel.
+- Purpose: send to friend for a yes before booking anything. Deploy via GitHub + Vercel.
+- GitHub: https://github.com/FA31000/Ha-Giang-2026 (branch `main`). Vercel: not set up yet.
 - Files: `index.html`, `style.css`, `script.js`, `routes.js` (map lines), `images/` (photos). Plain HTML, no build step. Tab layout based on the Japan 2026 site (https://japan-2026-beige-eight.vercel.app/).
 - Design: Vietnamese style – lacquer red, gold, jade, indigo, rice-paper background; woven H'mong-style stripe under the header, on day cards and footer. Fonts: Be Vietnam Pro + Playfair Display (Google Fonts). Every tab opens with a photo banner of the region.
 - Language: English. Budget in SGD, per person, everything included (estimates, 20,000 VND = 1 SGD). Total is calculated in `script.js` from the budget list (~SGD 580).
