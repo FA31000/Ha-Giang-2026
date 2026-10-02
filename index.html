@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ha Giang 2026 - The Loop by Motorbike</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <p class="title">Hà Giang 2026 <span>·</span> The Loop</p>
+  <nav class="menu">
+    <a href="#overview">Overview</a>
+    <a href="#days">Day by day</a>
+    <a href="#sleep">Where you sleep</a>
+    <a href="#budget">Budget</a>
+    <a href="#book">Book</a>
+    <a href="#licences">Licences</a>
+  </nav>
+</header>
+
+<main>
+
+<section id="tab-overview" class="panel">
+  <div class="banner big" style="background-image: url(images/nho-que.jpg)">
+    <div>
+      <p class="kicker">Hà Giang 2026</p>
+      <h1>Four days on the<br>Hà Giang Loop</h1>
+      <p>26 - 30 November  /  Hà Nội  /  Đồng Văn  /  Mèo Vạc  /  Du Già</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <h2>The shape of the trip</h2>
+    <p class="lead">A night bus up from Hanoi, three days riding the loop on our own bikes, a bus back down, and a working Monday by the airport before the evening flight home.</p>
+
+    <div class="stats">
+      <div><b>3</b><span>days on the bikes, no guide, no easy rider</span></div>
+      <div><b>310</b><span>km of riding in total, about 11-12 hours on the bike</span></div>
+      <div><b>2</b><span>nights on the loop: Đồng Văn and Du Già</span></div>
+      <div><b id="stat-total">~</b><span>SGD per person, everything included (estimate)</span></div>
+    </div>
+
+    <h2>The route</h2>
+    <p class="lead">Coloured lines are the three days on the bikes, blue dashes are the buses (Hanoi is off the bottom of the map: zoom out to see it). Tap a number for details.</p>
+    <div class="map" data-map="overview"></div>
+    <p class="map-key">
+      <span><i class="map-num sleep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 6h2v7h6V9h7a3 3 0 0 1 3 3v6h-2v-2H5v2H3z M8 12.5a2 2 0 1 0 0-.01z"/></svg></i> Where we sleep</span>
+      <span><i class="map-num">1</i> Stop on the way</span>
+      <span><i class="map-num opt">7</i> Optional</span>
+    </p>
+
+    <ul class="legs">
+      <li><i class="swatch bus"></i><b><span class="pill bus">Bus</span> Thu night · Nội Bài airport → Hà Giang</b><span>262 km · 6-7 h</span></li>
+      <li><i class="swatch" style="background:#a3201c"></i><b><span class="pill">Bike</span> Fri · Hà Giang → Đồng Văn</b><span>145 km · about 4.5 h riding</span></li>
+      <li><i class="swatch" style="background:#7b2d6b"></i><b><span class="pill">Bike</span> Sat · Đồng Văn → Mèo Vạc → Du Già</b><span>93 km · about 4 h riding</span></li>
+      <li><i class="swatch" style="background:#2e6b5a"></i><b><span class="pill">Bike</span> Sun · Du Già → Hà Giang</b><span>68 km · about 3 h riding</span></li>
+      <li><i class="swatch bus"></i><b><span class="pill bus">Bus</span> Sun afternoon · Hà Giang → Nội Bài airport</b><span>263 km · about 6 h</span></li>
+    </ul>
+
+    <p>Everything is organised by us, not a tour company: bikes from one shop in Hà Giang, buses from Bằng Phấn, and homestays booked on Booking.com or Agoda.</p>
+    <p class="callout">On Monday only one of us works, from the hotel by Nội Bài airport. Late check-out, then the Scoot flight at about 19:50.</p>
+  </div>
+</section>
+
+<section id="tab-days" class="panel" hidden>
+  <div class="banner" style="background-image: url(images/ma-pi-leng.jpg)">
+    <div>
+      <p class="kicker">Thursday to Monday</p>
+      <h2>Day by day</h2>
+      <p>Five days, from landing on Thursday evening to flying out on Monday evening.</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="day">
+      <div class="day-row">
+      <div class="day-body">
+        <p class="when">Day 1 · Thursday 26 November</p>
+        <h3>Land in Hanoi, night bus north</h3>
+        <ul>
+          <li>Fly Singapore to Hanoi, landing in the evening.</li>
+          <li>Bằng Phấn picks us up at Nội Bài airport.</li>
+          <li><span class="pill bus">Bus</span> Cabin sleeper at about 21:00-22:00 to Hà Giang: 262 km, <b>6-7 h</b>.</li>
+        </ul>
+        <p class="sleep">Sleep: on the bus</p>
+      </div>
+      <div class="map day-map" data-map="day1"></div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="photos">
+        <figure><img src="images/twin-mountains.jpg" alt="The Twin Mountains at Quản Bạ" loading="lazy"><figcaption>Twin (Fairy) Mountains, Quản Bạ</figcaption></figure>
+        <figure><img src="images/heaven-gate.jpg" alt="Road up to the Quản Bạ Heaven Gate" loading="lazy"><figcaption>Road to the Heaven Gate</figcaption></figure>
+        <figure><img src="images/yen-minh.jpg" alt="Pine forest near Yên Minh" loading="lazy"><figcaption>Pine forest, Yên Minh</figcaption></figure>
+        <figure><img src="images/tham-ma.jpg" alt="Thẩm Mã Pass" loading="lazy"><figcaption>Thẩm Mã Pass</figcaption></figure>
+        <figure><img src="images/vuong.jpg" alt="Courtyard of the Vương Palace" loading="lazy"><figcaption>Vương Palace</figcaption></figure>
+        <figure><img src="images/dong-van.jpg" alt="Đồng Văn old quarter" loading="lazy"><figcaption>Đồng Văn old quarter</figcaption></figure>
+      </div>
+      <div class="day-row">
+      <div class="day-body">
+        <p class="when">Day 2 · Friday 27 November</p>
+        <h3>Pick up the bikes, ride to Đồng Văn</h3>
+        <ul>
+          <li>Arrive in Hà Giang at about 04:00-05:00. Rest and breakfast.</li>
+          <li>Pick up the bikes.</li>
+          <li><span class="pill">Bike</span> Hà Giang → Quản Bạ Heaven Gate and the Twin Mountains: 45 km, <b>about 1.5 h</b>.</li>
+          <li><span class="pill">Bike</span> Quản Bạ → Yên Minh, through the pine forest, lunch: 52 km, <b>about 1.5 h</b>.</li>
+          <li><span class="pill">Bike</span> Yên Minh → Thẩm Mã Pass → Vương Palace (the H'mong king's house): 34 km, <b>about 1 h</b>.</li>
+          <li><span class="pill">Bike</span> Vương Palace → Đồng Văn: 14 km, <b>about 30 min</b>.</li>
+        </ul>
+        <p class="total">Riding today: 145 km, about 4.5 h on the bike, plus stops. A full day.</p>
+        <p class="sleep">Sleep: Đồng Văn</p>
+      </div>
+      <div class="map day-map" data-map="day2"></div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="photos">
+        <figure><img src="images/lung-cu.jpg" alt="The flag at Lũng Cú" loading="lazy"><figcaption>Lũng Cú flag (optional)</figcaption></figure>
+        <figure><img src="images/ma-pi-leng.jpg" alt="Mã Pí Lèng Pass" loading="lazy"><figcaption>Mã Pí Lèng Pass</figcaption></figure>
+        <figure><img src="images/nho-que.jpg" alt="The Nho Quế river in its canyon" loading="lazy"><figcaption>Nho Quế river, Tu Sản canyon</figcaption></figure>
+        <figure><img src="images/meo-vac.jpg" alt="Mèo Vạc town in its valley" loading="lazy"><figcaption>Mèo Vạc</figcaption></figure>
+      </div>
+      <div class="day-row">
+      <div class="day-body">
+        <p class="when">Day 3 · Saturday 28 November</p>
+        <h3>Mã Pí Lèng Pass and the Nho Quế river</h3>
+        <ul>
+          <li><span class="pill">Bike</span> Optional, early: Đồng Văn → Lũng Cú flag, at the northern tip of Vietnam, and back: 50 km, <b>about 1.5 h</b>.</li>
+          <li><span class="pill">Bike</span> Đồng Văn → Mã Pí Lèng Pass, early for the best light: 11 km, <b>about 30 min</b>.</li>
+          <li><span class="pill boat">Boat</span> Ride down to the Nho Quế river and take the boat through the Tu Sản canyon: <b>about 2 h</b> in total.</li>
+          <li><span class="pill">Bike</span> Mã Pí Lèng → Mèo Vạc, lunch and coffee at Voi Hostel: 11 km, <b>about 30 min</b>.</li>
+          <li><span class="pill">Bike</span> Mèo Vạc → Du Già: 71 km, <b>about 3 h</b>. Rough road, arrive before dark.</li>
+        </ul>
+        <p class="total">Riding today: 93 km, about 4 h on the bike (5.5 h with Lũng Cú), plus the boat.</p>
+        <p class="sleep">Sleep: Du Già</p>
+      </div>
+      <div class="map day-map" data-map="day3"></div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="photos">
+        <figure><img src="images/dugia.jpg" alt="Rice fields in the Du Già valley" loading="lazy"><figcaption>Du Già valley</figcaption></figure>
+        <figure><img src="images/dugia-peaks.jpg" alt="Mountains around Du Già" loading="lazy"><figcaption>Mountains around Du Già</figcaption></figure>
+      </div>
+      <div class="day-row">
+      <div class="day-body">
+        <p class="when">Day 4 · Sunday 29 November</p>
+        <h3>Waterfall, back to Hà Giang, bus down</h3>
+        <ul>
+          <li>Du Già waterfall, early.</li>
+          <li><span class="pill">Bike</span> Du Già → Hà Giang: 68 km, <b>about 3 h</b>.</li>
+          <li>Return the bikes at about 12:30.</li>
+          <li><span class="pill bus">Bus</span> Bằng Phấn limousine at about 13:00-14:00 to Nội Bài airport: 263 km, <b>about 6 h</b>.</li>
+          <li><span class="pill car">Taxi</span> Airport → Noi Bai Boutique Hotel: <b>about 7 min</b>.</li>
+        </ul>
+        <p class="total">Riding today: 68 km, about 3 h. Then about 6 h on the bus.</p>
+        <p class="sleep">Sleep: Noi Bai Boutique Hotel</p>
+      </div>
+      <div class="map day-map" data-map="day4"></div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-row">
+      <div class="day-body">
+        <p class="when">Day 5 · Monday 30 November</p>
+        <h3>Work day, evening flight home</h3>
+        <ul>
+          <li>Work from the hotel desk, 08:00-16:00 Hanoi time (09:00-17:00 Singapore time).</li>
+          <li>Late check-out at about 17:00.</li>
+          <li><span class="pill car">Shuttle</span> Hotel → Nội Bài airport: <b>about 7 min</b>.</li>
+          <li>Scoot flight at about 19:50, landing in Singapore just after midnight.</li>
+        </ul>
+        <p class="sleep">Sleep: home</p>
+      </div>
+      <div class="map day-map" data-map="day5"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tab-sleep" class="panel" hidden>
+  <div class="banner" style="background-image: url(images/dugia.jpg)">
+    <div>
+      <p class="kicker">Four nights</p>
+      <h2>Where you sleep</h2>
+      <p>Always one room with two beds.</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="cards">
+      <div class="card plain">
+        <span class="tag">Thu 26 Nov</span>
+        <h3>Bằng Phấn cabin sleeper</h3>
+        <p>Night bus from Nội Bài airport to Hà Giang, 6-7 h. A small private cabin with a flat bed.</p>
+      </div>
+      <div class="card">
+        <img src="images/dong-van.jpg" alt="Đồng Văn old quarter" loading="lazy">
+        <div class="card-body">
+          <span class="tag">Fri 27 Nov</span>
+          <h3>Đồng Văn homestay</h3>
+          <p>Our saved place in Đồng Văn (name still to confirm). Dinner ordered in advance.</p>
+          <p><a href="https://maps.app.goo.gl/HXNP1BiPCLHgdj5f9" target="_blank">Open in Google Maps</a></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/dugia.jpg" alt="Du Già valley" loading="lazy">
+        <div class="card-body">
+          <span class="tag">Sat 28 Nov</span>
+          <h3>Local Homestay Du Già</h3>
+          <p>In the Du Già valley. Dinner ordered in advance.</p>
+          <p><a href="https://maps.app.goo.gl/96WHjxjz1SQRj4q99" target="_blank">Open in Google Maps</a></p>
+        </div>
+      </div>
+      <div class="card plain">
+        <span class="tag">Sun 29 Nov</span>
+        <h3>Noi Bai Boutique Hotel</h3>
+        <p>4 stars, about 7 minutes from Nội Bài airport. Desk in the room, Wi-Fi rated 9.5/10 on Booking.com. Late check-out to about 17:00.</p>
+        <p><a href="https://www.booking.com/hotel/vn/noi-bai-boutique-4-stars.html" target="_blank">See on Booking.com</a></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/meo-vac.jpg" alt="Mèo Vạc" loading="lazy">
+      <div class="card-body">
+        <span class="tag">Lunch stop, Sat 28 Nov</span>
+        <h3>Voi Hostel, Mèo Vạc</h3>
+        <p><a href="https://maps.app.goo.gl/Yqc2HqGveYrHaXkx5" target="_blank">Open in Google Maps</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tab-budget" class="panel" hidden>
+  <div class="banner" style="background-image: url(images/terraces.jpg)">
+    <div>
+      <p class="kicker">Per person, in SGD</p>
+      <h2>Budget</h2>
+      <p>What each of us pays. Shared rooms are split in two.</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <table class="table">
+      <thead>
+        <tr><th>What</th><th>Details</th><th class="num">SGD</th></tr>
+      </thead>
+      <tbody id="budget-rows"></tbody>
+    </table>
+    <p class="note">All figures are estimates, rounded. Prices in Vietnam converted at about 20,000 VND = 1 SGD. Flights are not booked yet, so their prices will change.</p>
+  </div>
+</section>
+
+<section id="tab-book" class="panel" hidden>
+  <div class="banner" style="background-image: url(images/dugia-peaks.jpg)">
+    <div>
+      <p class="kicker">Nothing booked yet</p>
+      <h2>What to book, in order</h2>
+      <p>Once we both say yes, we book in this order.</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <ol class="booklist">
+      <li><b>Flight Singapore to Hanoi, Thursday 26 November</b><span>Land by about 20:00 so we can catch the night bus.</span></li>
+      <li><b>Scoot flight Hanoi to Singapore, Monday 30 November, about 19:50</b><span>Cheaper than the Singapore Airlines one at 18:25.</span></li>
+      <li><b>Noi Bai Boutique Hotel, Sunday 29 November</b><span>Twin room, late check-out to 17:00.</span></li>
+      <li><b>Đồng Văn homestay, Friday 27 November</b><span>Twin room, pre-order dinner.</span></li>
+      <li><b>Local Homestay Du Già, Saturday 28 November</b><span>Twin room, pre-order dinner.</span></li>
+      <li><b>Bằng Phấn buses</b><span>Thursday night cabin sleeper from Nội Bài airport to Hà Giang. Sunday afternoon limousine from Hà Giang to Nội Bài airport. Book on Baolau.com or Vexere.</span></li>
+      <li><b>Two bikes, Friday to Sunday</b><span>Honda Future 125cc from QT Motorbikes. Ask if a French licence is enough.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section id="tab-licences" class="panel" hidden>
+  <div class="banner" style="background-image: url(images/heaven-gate.jpg)">
+    <div>
+      <p class="kicker">Can't wait</p>
+      <h2>The driving licences</h2>
+      <p>This is the one thing to sort out now.</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <p>Vietnam only accepts an International Driving Permit (IDP) from the 1968 Vienna Convention, with motorbike category <b>A</b>. IDPs from the 1949 convention are not valid.</p>
+
+    <div class="cards">
+      <div class="card plain">
+        <h3>Your IDP</h3>
+        <p>You already have one. Check that it's the 1968 type and shows category A.</p>
+      </div>
+      <div class="card plain">
+        <h3>My French licence</h3>
+        <p>French licence only. France issues 1968 IDPs. If my licence has category A, apply now: it can be slow from abroad.</p>
+      </div>
+    </div>
+
+    <h3>If we ride without a valid IDP</h3>
+    <ul>
+      <li>Fine of about 2-4 million VND (SGD 100-200) for bikes up to 125cc.</li>
+      <li>Fine of 6-8 million VND and the bike may be taken for anything bigger.</li>
+      <li>Travel insurance will probably not pay if there's an accident.</li>
+    </ul>
+    <p class="callout">That's why we stick to bikes of 125cc or less.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>Hà Giang 2026 · Draft plan for feedback. Prices are estimates and nothing is booked yet.</p>
+  <p>Map: © <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors, <a href="https://opentopomap.org" target="_blank">OpenTopoMap</a> (CC BY-SA). Routes: OSRM.
+  Photos from Wikimedia Commons: Nho Quế river, Thẩm Mã Pass and Du Già valley by NKSTTSSHNVN (CC BY-SA 4.0); Mã Pí Lèng Pass and Vương Palace by Khánh Hmoong (CC BY 2.0); Twin Mountains by Lee Lio (CC BY 2.0); Lũng Cú and Yên Minh pine forest by Vuong Tri Binh (CC BY-SA 4.0); Đồng Văn old quarter and Mèo Vạc by Khoitran1957 (CC BY-SA 4.0); Du Già mountains by Teaanhvu (CC BY-SA 4.0); Heaven Gate road by Thái Nhi and Đồng Văn terraces by Thái Nhi and BacLuong (public domain).</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="routes.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
