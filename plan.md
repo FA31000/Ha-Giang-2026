@@ -81,9 +81,9 @@
   - Book – booking order (nothing booked yet).
   - Licences – IDP rules, fines.
   - (Before you go tab removed.)
-- Overnight stops on the maps: gold square bed marker + always-visible label ("Fri night · Đồng Văn", "Sat night · Du Già", "Sun night · Noi Bai Boutique Hotel"). Legend under the overview map.
-- Day-by-day maps: each day card has its own small map showing only that day's lines and stops (Day 1 bus up, Day 2–3 loop, Day 4 ride back + bus down, Day 5 airport hotel). On the right of the text on wide screens, under it below 900px. Maps are built when the tab is first opened.
-- Map: Leaflet + OpenTopoMap terrain tiles. Lines follow the real roads (fetched once from OSRM and saved in `routes.js`; a Mậu Duệ waypoint forces the right Mèo Vạc → Du Già road). Bike days in red (Fri), purple (Sat), jade (Sun); buses dashed blue. 10 numbered stops with popups; Lũng Cú shown as optional (white). Map is zoomed on the loop; Hanoi is off the bottom (zoom out to see). No flight shown.
+- Overnight stops on the maps: gold square bed marker + always-visible label ("Fri night · Đồng Văn", "Sat night · Du Già"). Legend under the overview map.
+- Day-by-day maps: only the 3 bike days (Fri, Sat, Sun) have a small map, showing only that day's ride and stops. Day 1 and Day 5 have no map. On the right of the text on wide screens, under it below 900px. Maps are built when the tab is first opened.
+- All maps show the bike loop only: no buses, no Hanoi. Zoomed on the- Map: Leaflet + OpenTopoMap terrain tiles. Lines follow the real roads (fetched once from OSRM and saved in `routes.js`; a Mậu Duệ waypoint forces the right Mèo Vạc → Du Già road). Bike days in red (Fri), purple (Sat), jade (Sun). 9 numbered stops with popups; Lũng Cú (6) shown as optional (white). No buses or flights shown. shown.
 - Ride times used: Fri 145 km ~4.5 h; Sat 93 km ~4 h (+1.5 h Lũng Cú, + ~2 h boat); Sun 68 km ~3 h. Buses: 6–7 h up, ~6 h down.
 - Photos: Wikimedia Commons, saved in `images/`, credits in the footer.
 - Local preview: `.claude/launch.json` runs `python -m http.server 8123`.

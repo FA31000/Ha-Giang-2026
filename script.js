@@ -10,8 +10,6 @@ function showTab() {
 
 // Lines (from routes.js) and how they look
 const lineStyle = {
-  bus1: { color: '#1f2a4d', dashArray: '6 8' },
-  bus2: { color: '#1f2a4d', dashArray: '6 8' },
   day2: { color: '#a3201c' },
   day3: { color: '#7b2d6b' },
   day4: { color: '#2e6b5a' }
@@ -19,7 +17,6 @@ const lineStyle = {
 
 // Stops: [id, lat, lng, name, popup text, type, label]. Type 'sleep' = where we spend the night (gold bed marker + label).
 const stops = [
-  ['noibai', 21.2187, 105.8042, 'Nội Bài airport', 'Bus pick-up Thu night, bus drop-off Sun evening. Noi Bai Boutique Hotel Sun night, 7 min away.', 'sleep', 'Sun night · Noi Bai Boutique Hotel'],
   ['hg', 22.8233, 104.9836, 'Hà Giang city', 'Arrive Fri ~04:00-05:00, pick up the bikes. Return them Sun ~12:30.'],
   ['gate', 23.0493, 104.9930, 'Quản Bạ Heaven Gate', 'With the Twin (Fairy) Mountains just below. Fri morning.'],
   ['yenminh', 23.1206, 105.1394, 'Yên Minh', 'Lunch on Friday, then the Thẩm Mã Pass.'],
@@ -31,14 +28,12 @@ const stops = [
   ['dugia', 22.9326, 105.2224, 'Du Già', 'Local Homestay Du Già, Sat night. Dinner pre-ordered. Waterfall early Sun.', 'sleep', 'Sat night · Du Già']
 ];
 
-// What each map shows. The overview map is framed on the loop only, so Hanoi is off the bottom.
+// What each map shows: the bike loop only, no buses.
 const mapContent = {
-  overview: { lines: Object.keys(ROUTES), stops: stops.map(s => s[0]), frame: stops.slice(1).map(s => s[0]) },
-  day1: { lines: ['bus1'], stops: ['noibai', 'hg'] },
+  overview: { lines: ['day2', 'day3', 'day4'], stops: stops.map(s => s[0]) },
   day2: { lines: ['day2'], stops: ['hg', 'gate', 'yenminh', 'vuong', 'dongvan'] },
   day3: { lines: ['day3'], stops: ['dongvan', 'lungcu', 'mapileng', 'meovac', 'dugia'] },
-  day4: { lines: ['day4', 'bus2'], stops: ['dugia', 'hg', 'noibai'] },
-  day5: { lines: [], stops: ['noibai'] }
+  day4: { lines: ['day4'], stops: ['dugia', 'hg'] }
 };
 
 const bed = '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M3 6h2v7h6V9h7a3 3 0 0 1 3 3v6h-2v-2H5v2H3z M8 12.5a2 2 0 1 0 0-.01z"/></svg>';
@@ -54,8 +49,7 @@ function buildMap(el) {
   const frame = [];
   content.lines.forEach(key => {
     L.polyline(ROUTES[key].line, { color: '#fff', weight: 9, opacity: .8 }).addTo(map);
-    const line = L.polyline(ROUTES[key].line, { weight: 5, ...lineStyle[key] }).addTo(map);
-    if (!content.frame) frame.push(line);
+    frame.push(L.polyline(ROUTES[key].line, { weight: 5, ...lineStyle[key] }).addTo(map));
   });
 
   stops.forEach(([id, lat, lng, name, text, type = '', label], i) => {
@@ -65,7 +59,7 @@ function buildMap(el) {
     const icon = L.divIcon({ className: '', html: `<div class="map-num ${type}">${sleep ? bed : i + 1}</div>`, iconSize: [size, size], iconAnchor: [size / 2, size / 2] });
     const marker = L.marker([lat, lng], { icon, zIndexOffset: sleep ? 1000 : 0 }).addTo(map).bindPopup(`<b>${name}</b><br>${text}`);
     if (label) marker.bindTooltip(label, { permanent: true, direction: 'right', offset: [18, 0], className: 'sleep-label' });
-    if (!content.frame || content.frame.includes(id)) frame.push(marker);
+    frame.push(marker);
   });
 
   el.bounds = L.featureGroup(frame).getBounds();

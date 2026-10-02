@@ -78,7 +78,6 @@ img { display: block; max-width: 100%; }
 .legs { list-style: none; padding: 0; margin: 0 0 2rem; display: grid; gap: .5rem; }
 .legs li { display: flex; flex-wrap: wrap; align-items: center; gap: .3rem .7rem; background: var(--white); padding: .6rem .8rem; border-radius: 8px; }
 .legs .swatch { width: 26px; height: 6px; border-radius: 3px; flex: none; }
-.legs .swatch.bus { background: repeating-linear-gradient(90deg, var(--indigo) 0 6px, transparent 6px 10px); }
 .legs b { flex: 1 1 220px; }
 .legs span { color: var(--muted); font-size: .92rem; }
 
